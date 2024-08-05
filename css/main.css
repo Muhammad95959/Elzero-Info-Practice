@@ -73,6 +73,18 @@ h1::after {
   background-color: black;
   width: 40px;
 }
+.c-blue {
+  color: var(--blue-color);
+}
+.c-orange {
+  color: var(--orange-color);
+}
+.c-green {
+  color: var(--green-color);
+}
+.c-red {
+  color: var(--red-color);
+}
 .c-grey {
   color: var(--grey-color);
 }
@@ -417,6 +429,13 @@ header img {
 .targets > div:not(:first-child) > div {
   flex-grow: 1;
 }
+.targets > div:not(:first-child) p.c-grey {
+  font-size: 14px;
+  font-weight: 500;
+}
+.targets h3 {
+  margin: 2px 0 10px;
+}
 .targets .bar {
   display: block;
   position: relative;
@@ -491,3 +510,38 @@ header img {
   background-color: var(--green-color);
 }
 /*end targets widget*/
+
+/*start stats widget*/
+.stats {
+  background-color: white;
+  border-radius: var(--widget-radius);
+  padding: 20px;
+}
+.stats .text {
+  font-weight: 500;
+}
+.stats .text p {
+  margin: 10px 0 20px;
+  font-size: 14px;
+}
+.stats .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  text-align: center;
+}
+.stats .box {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+.stats .box i {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.stats .box p {
+  margin-top: 5px;
+  font-size: 13px;
+  font-weight: 500;
+}
+/*end stats widget*/
