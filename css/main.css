@@ -12,6 +12,7 @@
   --green-color: #22c55e;
   --red-color: #f44336;
   --grey-color: #888;
+  --widget-radius: 10px;
 }
 @font-face {
   font-family: "Open Sans";
@@ -195,20 +196,21 @@ header img {
 /*end header*/
 
 .dashboard-grid {
-  grid-template-columns: repeat(auto-fill, minmax(450px));
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   gap: 20px;
   padding: 20px;
 }
 
 /*start welcome widget*/
 .welcome {
-  border-radius: 10px;
+  border-radius: var(--widget-radius);
 }
 .welcome > div:first-child {
   position: relative;
   background-color: #eee;
   padding: 20px 20px 10px;
   height: 140px;
+  border-radius: var(--widget-radius) var(--widget-radius) 0 0;
 }
 .welcome img:first-of-type {
   width: 200px;
@@ -234,6 +236,7 @@ header img {
 .welcome > div:nth-child(2) {
   padding-top: 60px;
   flex-direction: column;
+  border-radius: 0 0 var(--widget-radius) var(--widget-radius);
 }
 .welcome > div:nth-child(2) > div {
   padding: 20px 0;
@@ -260,3 +263,28 @@ header img {
   align-self: flex-end;
 }
 /*end welcome widget*/
+
+/*start draft widget*/
+.draft {
+  border-radius: var(--widget-radius);
+  padding: 20px;
+}
+.draft p.c-grey {
+  font-size: 14px;
+  margin: 10px 0 20px;
+}
+.draft form {
+  gap: 20px;
+}
+.draft input,
+.draft textarea {
+  background-color: #eee;
+  padding: 10px;
+  border: none;
+  resize: none;
+  border-radius: 6px;
+}
+.draft a {
+  align-self: flex-end;
+}
+/*end draft widget*/
