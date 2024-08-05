@@ -1,90 +1,95 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Elzero-Info-Practice</title>
     <link href="fonts/fontAweosome/css/all.min.css" rel="stylesheet" />
-    <link href="css/framework.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="page d-flex">
+    <div class="page">
       <!-- start sidebar -->
-      <div class="sidebar bg-white">
+      <div class="sidebar">
         <div class="sidebar-content">
           <h3>Elzero</h3>
           <ul>
             <li class="active">
-              <a class="c-black fs-15 fw-500 d-block" href="index.html"
-                ><i class="fa-regular fa-chart-bar fa-fw mr-10"></i
-                ><span class="hide-768">Dashboard</span></a
-              >
+              <a href="index.html">
+                <i class="fa-regular fa-chart-bar fa-fw"></i>
+                <span class="hide-768">Dashboard</span>
+              </a>
             </li>
             <li>
-              <a class="c-black fs-15 fw-500 d-block" href="settings.html"
-                ><i class="fa-solid fa-gear fa-fw mr-10"></i
-                ><span class="hide-768">Settings</span></a
-              >
+              <a href="settings.html">
+                <i class="fa-solid fa-gear fa-fw"></i>
+                <span class="hide-768">Settings</span>
+              </a>
             </li>
             <li>
-              <a class="c-black fs-15 fw-500 d-block" href="profile.html"
-                ><i class="fa-regular fa-user fa-fw mr-10"></i
-                ><span class="hide-768">Profile</span></a
-              >
+              <a href="profile.html">
+                <i class="fa-regular fa-user fa-fw"></i>
+                <span class="hide-768">Profile</span>
+              </a>
             </li>
             <li>
-              <a class="c-black fs-15 fw-500 d-block" href="projects.html"
-                ><i class="fa-solid fa-diagram-project fa-fw mr-10"></i
-                ><span class="hide-768">Projects</span></a
-              >
+              <a href="projects.html">
+                <i class="fa-solid fa-diagram-project fa-fw"></i>
+                <span class="hide-768">Projects</span>
+              </a>
             </li>
             <li>
-              <a class="c-black fs-15 fw-500 d-block" href="courses.html"
-                ><i class="fa-solid fa-graduation-cap fa-fw mr-10"></i
-                ><span class="hide-768">Courses</span></a
-              >
+              <a href="courses.html">
+                <i class="fa-solid fa-graduation-cap fa-fw"></i>
+                <span class="hide-768">Courses</span>
+              </a>
             </li>
             <li>
-              <a class="c-black fs-15 fw-500 d-block" href="friends.html"
-                ><i class="fa-regular fa-circle-user fa-fw mr-10"></i
-                ><span class="hide-768">Friends</span></a
-              >
+              <a href="friends.html">
+                <i class="fa-regular fa-circle-user fa-fw"></i>
+                <span class="hide-768">Friends</span>
+              </a>
             </li>
             <li>
-              <a class="c-black fs-15 fw-500 d-block" href="files.html"
-                ><i class="fa-regular fa-file fa-fw mr-10"></i
-                ><span class="hide-768">Files</span></a
-              >
+              <a href="files.html">
+                <i class="fa-regular fa-file fa-fw"></i>
+                <span class="hide-768">Files</span>
+              </a>
             </li>
             <li>
-              <a class="c-black fs-15 fw-500 d-block" href="plans.html"
-                ><i class="fa-regular fa-credit-card fa-fw mr-10"></i
-                ><span class="hide-768">Plans</span></a
-              >
+              <a href="plans.html">
+                <i class="fa-regular fa-credit-card fa-fw"></i>
+                <span class="hide-768">Plans</span>
+              </a>
             </li>
           </ul>
         </div>
       </div>
       <!-- end sidebar -->
 
-      <div class="content flex-1">
+      <!-- start page content -->
+      <div class="page-content">
         <!-- start header -->
-        <header class="bg-white flex-between">
+        <header>
           <div>
-            <i class="fa-solid fa-magnifying-glass search"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
             <input type="text" placeholder="Type A KeyWord" />
           </div>
-          <div class="flex-center">
-            <i class="fa-regular fa-bell notifications"></i>
+          <div>
+            <i class="fa-regular fa-bell"></i>
             <img src="images/avatar.png" alt="" />
           </div>
         </header>
         <!-- end header -->
 
+        <!-- start the main heading -->
         <h1>Dashboard</h1>
-        <div class="dashboard-grid d-grid">
+        <!-- end the main heading -->
+
+        <div class="dashboard">
           <!-- start welcome widget -->
-          <div class="welcome bg-white">
-            <div class="flex-between">
+          <div class="welcome">
+            <div>
               <div class="text">
                 <h2>Welcome</h2>
                 <p class="c-grey">Elzero</p>
@@ -92,8 +97,8 @@
               <img class="hide-768" src="images/welcome.png" alt="" />
               <img src="images/avatar.png" alt="" />
             </div>
-            <div class="bg-white d-flex">
-              <div class="flex-evenly fw-500">
+            <div>
+              <div>
                 <div class="info">
                   <p>Osama Elzero</p>
                   <p class="c-grey">Developer</p>
@@ -107,9 +112,7 @@
                   <p class="c-grey">Earned</p>
                 </div>
               </div>
-              <a href="#" class="bg-blue c-white d-block w-fit btn-1"
-                >Profile</a
-              >
+              <a href="#" class="blue-btn">Profile</a>
             </div>
           </div>
           <!-- end welcome widget -->
@@ -120,60 +123,56 @@
               <h2>Quick Draft</h2>
               <p class="c-grey">Write A Draft For Your Ideas</p>
             </div>
-            <form class="flex-column">
-              <input class="d-block" type="text" placeholder="Title" />
-              <textarea
-                class="d-block"
-                rows="10"
-                placeholder="Your Thought"
-              ></textarea>
-              <a href="#" class="bg-blue c-white d-block w-fit btn-1">Save</a>
+            <form>
+              <input type="text" placeholder="Title" />
+              <textarea rows="10" placeholder="Your Thought"></textarea>
+              <a href="#" class="blue-btn">Save</a>
             </form>
           </div>
           <!-- end draft widget -->
 
           <!-- start targest widget -->
-          <div class="targets bg-white">
+          <div class="targets">
             <div class="text">
               <h2>Yearly Targets</h2>
               <p class="c-grey">Targets Of The Year</p>
             </div>
-            <div class="d-flex">
-              <i class="fa-solid fa-dollar-sign flex-center c-blue"></i>
-              <div class="flex-1">
+            <div>
+              <i class="fa-solid fa-dollar-sign c-blue"></i>
+              <div>
                 <p class="c-grey">Money</p>
                 <h3>$20.000</h3>
-                <span class="bar d-block">
-                  <p class="c-white bg-blue w-fit fw-500" style="left: 80%">
+                <span class="bar">
+                  <p class="bg-blue" style="left: 80%">
                     80%
                   </p>
-                  <span class="bg-blue d-block" style="width: 80%"></span>
+                  <span class="bg-blue" style="width: 80%"></span>
                 </span>
               </div>
             </div>
-            <div class="d-flex">
-              <i class="fa-solid fa-code flex-center c-orange"></i>
-              <div class="flex-1">
+            <div>
+              <i class="fa-solid fa-code c-orange"></i>
+              <div>
                 <p class="c-grey">Projects</p>
                 <h3>24</h3>
-                <span class="bar d-block">
-                  <p class="c-white bg-orange w-fit fw-500" style="left: 55%">
+                <span class="bar">
+                  <p class="bg-orange" style="left: 55%">
                     55%
                   </p>
-                  <span class="bg-orange d-block" style="width: 55%"></span>
+                  <span class="bg-orange" style="width: 55%"></span>
                 </span>
               </div>
             </div>
-            <div class="d-flex">
-              <i class="fa-solid fa-user flex-center c-green"></i>
-              <div class="flex-1">
+            <div>
+              <i class="fa-solid fa-user c-green"></i>
+              <div>
                 <p class="c-grey">Team</p>
                 <h3>12</h3>
-                <span class="bar d-block">
-                  <p class="c-white bg-green w-fit fw-500" style="left: 75%">
+                <span class="bar">
+                  <p class="bg-green" style="left: 75%">
                     75%
                   </p>
-                  <span class="bg-green d-block" style="width: 75%"></span>
+                  <span class="bg-green" style="width: 75%"></span>
                 </span>
               </div>
             </div>
@@ -181,6 +180,7 @@
           <!-- end targest widget -->
         </div>
       </div>
+      <!-- end page content -->
     </div>
   </body>
 </html>

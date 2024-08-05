@@ -73,7 +73,35 @@ h1::after {
   background-color: black;
   width: 40px;
 }
+.c-grey {
+  color: var(--grey-color);
+}
+.blue-btn {
+  display: block;
+  width: fit-content;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  background-color: var(--blue-color);
+  color: white;
+  transition: background-color 0.3s;
+}
+.blue-btn:focus {
+  background-color: var(--blue-alt-color);
+}
+@media (max-width: 768px) {
+  .hide-768 {
+    display: none;
+  }
+}
 /*end global rules*/
+
+/*start page settings*/
+.page {
+  display: flex;
+}
+/*end page settings*/
 
 /*start sidebar*/
 .sidebar {
@@ -82,6 +110,7 @@ h1::after {
   box-shadow: 0 0 10px #ddd;
   padding: 20px;
   z-index: 1;
+  background-color: white;
 }
 .sidebar .sidebar-content {
   position: sticky;
@@ -122,7 +151,11 @@ h1::after {
   background-color: #f6f6f6;
 }
 .sidebar a {
+  font-size: 15px;
+  font-weight: 500;
+  display: block;
   padding: 8px 10px;
+  color: black;
 }
 .sidebar i {
   margin-right: 10px;
@@ -146,15 +179,25 @@ h1::after {
 }
 /*end sidebar*/
 
+/*start page-content settings*/
+.page-content {
+  flex-grow: 1;
+}
+/*end page-content settings*/
+
 /*start header*/
 header {
   width: 100%;
   padding: 15px 20px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-header div:has(i.search) {
+header > div:first-child {
   position: relative;
 }
-header i.search {
+header > div:first-child i {
   position: absolute;
   left: 10px;
   top: 50%;
@@ -168,7 +211,7 @@ header input {
   border-radius: 10px;
   border: 1px solid #ccc;
   display: block;
-  transition-duration: 0.3s;
+  transition: width 0.3s;
 }
 header input:focus {
   width: 200px;
@@ -179,12 +222,17 @@ header input::placeholder {
 header input:focus::placeholder {
   opacity: 0;
 }
-header i.notifications {
+header > div:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header > div:last-child i {
   font-size: 20px;
   position: relative;
   margin-right: 13px;
 }
-header i.notifications::after {
+header > div:last-child i::after {
   content: "";
   position: absolute;
   top: -5px;
@@ -200,13 +248,14 @@ header img {
 /*end header*/
 
 /*start grid settings*/
-.dashboard-grid {
+.dashboard {
+  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   gap: 20px;
   padding: 20px;
 }
 @media (max-width: 768px) {
-  .dashboard-grid {
+  .dashboard {
     grid-template-columns: 1fr;
     gap: 10px;
     padding: 10px;
@@ -217,13 +266,17 @@ header img {
 /*start welcome widget*/
 .welcome {
   border-radius: var(--widget-radius);
+  background-color: white;
 }
 .welcome > div:first-child {
+  display: flex;
+  justify-content: space-between;
   position: relative;
   background-color: #eee;
   padding: 20px 20px 10px;
   height: 140px;
   border-radius: var(--widget-radius) var(--widget-radius) 0 0;
+  font-weight: 500;
 }
 .welcome img:first-of-type {
   width: 200px;
@@ -247,14 +300,18 @@ header img {
   }
 }
 .welcome > div:nth-child(2) {
+  display: flex;
   padding-top: 60px;
   flex-direction: column;
   border-radius: 0 0 var(--widget-radius) var(--widget-radius);
 }
 .welcome > div:nth-child(2) > div {
+  display: flex;
+  justify-content: space-evenly;
   padding: 20px 0;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
+  font-weight: 500;
 }
 @media (max-width: 768px) {
   .welcome > div:nth-child(2) > div {
@@ -283,6 +340,9 @@ header img {
 
 /*start draft widget*/
 .draft {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
   border-radius: var(--widget-radius);
   padding: 20px;
 }
@@ -291,6 +351,8 @@ header img {
   margin: 10px 0 20px;
 }
 .draft form {
+  display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 .draft input,
@@ -300,6 +362,7 @@ header img {
   border: none;
   resize: none;
   border-radius: 6px;
+  display: block;
 }
 .draft a {
   align-self: flex-end;
@@ -312,35 +375,50 @@ header img {
 
 /*start targets widget*/
 .targets {
+  background-color: white;
   padding: 20px;
   border-radius: var(--widget-radius);
+}
+.targets .text {
+  font-weight: 500;
 }
 .targets .text p {
   margin: 10px 0 20px;
   font-size: 14px;
 }
-.targets > div.d-flex {
+.targets > div:not(:first-child) {
+  display: flex;
   align-items: center;
+}
+.targets > div:nth-of-type(3) {
+  margin: 20px 0;
 }
 .targets i {
   width: 80px;
   height: 80px;
   margin-right: 15px;
   font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .targets i.c-blue {
   background-color: rgb(0 117 255 / 20%);
+  color: var(--blue-color);
 }
 .targets i.c-orange {
   background-color: rgb(245 158 11 / 20%);
+  color: var(--orange-color);
 }
 .targets i.c-green {
   background-color: rgb(34 197 94 / 20%);
+  color: var(--green-color);
 }
-.targets > div:nth-of-type(3) {
-  margin: 20px 0;
+.targets > div:not(:first-child) > div {
+  flex-grow: 1;
 }
 .targets .bar {
+  display: block;
   position: relative;
   width: 100%;
   height: 4px;
@@ -362,12 +440,24 @@ header img {
   margin: 5px 0 10px;
 }
 .targets .bar p {
+  color: white;
+  width: fit-content;
+  font-weight: 500;
   position: absolute;
   font-size: 13px;
   padding: 2px 4px;
   border-radius: 6px;
   top: -30px;
   transform: translateX(-50%);
+}
+.targets .bar p.bg-blue {
+  background: var(--blue-color);
+}
+.targets .bar p.bg-orange {
+  background: var(--orange-color);
+}
+.targets .bar p.bg-green {
+  background: var(--green-color);
 }
 .targets .bar p::after {
   content: "";
@@ -388,6 +478,16 @@ header img {
   border-color: var(--green-color) transparent transparent transparent;
 }
 .targets .bar span {
+  display: block;
   height: 4px;
+}
+.targets .bar span.bg-blue {
+  background-color: var(--blue-color);
+}
+.targets .bar span.bg-orange {
+  background-color: var(--orange-color);
+}
+.targets .bar span.bg-green {
+  background-color: var(--green-color);
 }
 /*end targets widget*/
