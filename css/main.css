@@ -545,3 +545,58 @@ header img {
   font-weight: 500;
 }
 /*end stats widget*/
+
+/*start news widget*/
+.news {
+  background-color: white;
+  border-radius: var(--widget-radius);
+  padding: 20px;
+}
+.news .box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-top: 20px;
+}
+.news .box:not(:last-child) {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+.news img {
+  width: 100px;
+  border-radius: 6px;
+}
+.news .text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.news .text h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.news .text p.c-grey {
+  font-size: 14px;
+  font-weight: 500;
+}
+.news .text > p {
+  font-size: 13px;
+  font-weight: 500;
+  background-color: #eee;
+  border-radius: 6px;
+  padding: 4px 10px;
+}
+@media (max-width: 768px) {
+  .news .box {
+    flex-direction: column;
+    text-align: center;
+  }
+  .news .text {
+    flex-direction: column;
+  }
+  .news .text > p {
+    margin-top: 13px;
+  }
+}
+/*end news widget*/
