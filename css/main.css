@@ -643,3 +643,32 @@ header img {
   color: var(--red-color);
 }
 /*end tasks widget*/
+
+/*start search widget*/
+.search {
+  background-color: white;
+  border-radius: var(--widget-radius);
+  padding: 20px;
+}
+.search > div:first-of-type {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  margin: 20px 0;
+}
+.search .content {
+  display: grid;
+  gap: 30px;
+}
+.search .item {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+.search .item p:last-child {
+  background-color: #eee;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 13px;
+}
+/*end search widget*/
