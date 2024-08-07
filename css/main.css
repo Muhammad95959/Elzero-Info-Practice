@@ -672,3 +672,42 @@ header img {
   font-size: 13px;
 }
 /*end search widget*/
+
+/*start uploads widget*/
+.uploads {
+  background-color: white;
+  border-radius: var(--widget-radius);
+  padding: 20px;
+  font-weight: 500;
+}
+.uploads h2 {
+  margin-bottom: 10px;
+}
+.uploads .item {
+  display: flex;
+  gap: 10px;
+  padding-top: 10px;
+}
+.uploads .item:not(:last-child) {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+.uploads img {
+  width: 40px;
+}
+.uploads .item > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.uploads .c-grey {
+  font-size: 15px;
+}
+.uploads .item > div > p {
+  background-color: #eee;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 13px;
+}
+/*end uploads widget*/
