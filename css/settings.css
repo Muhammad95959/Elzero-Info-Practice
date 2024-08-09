@@ -118,7 +118,7 @@
   border: 1px solid #ccc;
   width: 100%;
 }
-.general-info div:has( > a) {
+.general-info div:has(> a) {
   display: flex;
   gap: 15px;
   align-items: center;
@@ -131,3 +131,36 @@
   color: var(--blue-color);
 }
 /*end general-info widget*/
+
+/*start security-info widget*/
+.security-info {
+  background-color: white;
+  border-radius: var(--widget-radius);
+  padding: 20px;
+}
+.security-info > p {
+  margin-top: 15px;
+  font-size: 15px;
+}
+.security-info > div {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.security-info > div:nth-of-type(2) {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.security-info > div p.c-grey {
+  font-size: 13px;
+  margin-top: 7px;
+}
+.security-info a {
+  font-size: 15px;
+}
+.security-info > div:last-of-type a {
+  background-color: #eee;
+  color: black;
+}
+/*end security-info widget*/
