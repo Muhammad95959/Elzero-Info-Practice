@@ -89,6 +89,18 @@ h1::after {
 .c-grey {
   color: var(--grey-color);
 }
+.bg-blue {
+  background-color: var(--blue-color);
+}
+.bg-orange {
+  background-color: var(--orange-color);
+}
+.bg-green {
+  background-color: var(--green-color);
+}
+.bg-red {
+  background-color: var(--red-color);
+}
 .blue-btn {
   display: block;
   width: fit-content;
@@ -947,3 +959,47 @@ header img {
   color: white;
 }
 /*end social widget*/
+
+/*start projects-table widget*/
+.projects-table {
+  background-color: white;
+  border-radius: var(--widget-radius);
+  padding: 20px;
+  grid-column: 1 / -1;
+}
+.projects-table > div {
+  overflow-x: auto;
+}
+.projects-table table {
+  border-spacing: 0;
+  width: 100%;
+  min-width: 1000px;
+  text-align: left;
+  margin-top: 20px;
+  border: 1px solid #eee;
+  border-collapse: collapse;
+}
+.projects-table th,
+.projects-table td {
+  padding: 20px;
+  border: 1px solid #eee;
+}
+.projects-table th {
+  background-color: #eee;
+}
+.projects-table img {
+  border-radius: 50%;
+  border: 2px solid white;
+  width: 30px;
+}
+.projects-table img:not(:last-child) {
+  margin-right: -20px;
+}
+.projects-table td:last-child p {
+  color: white;
+  width: fit-content;
+  padding: 5px 10px;
+  font-size: 13px;
+  border-radius: 6px;
+}
+/*end projects-table widget*/
