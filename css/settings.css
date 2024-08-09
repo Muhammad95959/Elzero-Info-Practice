@@ -91,3 +91,43 @@
   padding: 10px;
 }
 /*end site-control widget*/
+
+/*start general-info widget*/
+.general-info {
+  background-color: white;
+  border-radius: var(--widget-radius);
+  padding: 20px;
+}
+.general-info p.c-grey {
+  margin: 15px 0 10px;
+  font-size: 15px;
+}
+.general-info label,
+.general-info input {
+  display: block;
+}
+.general-info label {
+  color: var(--grey-color);
+  font-size: 15px;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+.general-info input {
+  border-radius: 6px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+.general-info div:has( > a) {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.general-info input[disabled] {
+  background-color: #f0f4f8;
+  color: #aaa;
+}
+.general-info a {
+  color: var(--blue-color);
+}
+/*end general-info widget*/
