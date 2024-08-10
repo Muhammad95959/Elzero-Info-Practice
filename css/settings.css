@@ -260,3 +260,90 @@
   transform: translateY(-50%) scale(1);
 }
 /*end widgets-control widget*/
+
+/*start backup-manager widget*/
+.backup-manager {
+  background-color: white;
+  border-radius: var(--widget-radius);
+  padding: 20px;
+}
+.backup-manager p.c-grey {
+  margin-top: 10px;
+  font-size: 15px;
+}
+.backup-manager .period-group {
+  display: grid;
+  gap: 15px;
+  padding: 15px 0 20px;
+  border-bottom: 1px solid #eee;
+  padding-left: 42px;
+}
+.backup-manager .period-group label {
+  position: relative;
+  cursor: pointer;
+}
+.backup-manager .period-group label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -32px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--grey-color);
+  box-sizing: border-box;
+  transition-duration: 0.3s;
+}
+.backup-manager .period-group label:hover::before,
+.backup-manager .period-group label:has(input:checked)::before {
+  border-color: var(--blue-color);
+}
+.backup-manager .period-group label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  left: -28px;
+  width: 12.5px;
+  height: 12.5px;
+  border-radius: 50%;
+  background-color: var(--blue-color);
+  transition-duration: 0.3s;
+}
+.backup-manager .period-group label:has(input:checked)::after {
+  transform: translateY(-50%) scaleY(1);
+}
+.backup-manager input {
+  display: none;
+}
+.backup-manager .method-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding-top: 20px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .backup-manager .method-group {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+.backup-manager .method-group label {
+  border-radius: 6px;
+  border: 2px solid #ddd;
+  padding: 15px;
+}
+.backup-manager .method-group label {
+  cursor: pointer;
+}
+.backup-manager .method-group label:has(input:checked) {
+  border-color: var(--blue-color);
+  color: var(--blue-color);
+}
+.backup-manager .method-group i {
+  display: block;
+  margin-bottom: 10px;
+}
+/*end backup-manager widget*/
