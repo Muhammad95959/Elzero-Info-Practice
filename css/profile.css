@@ -182,3 +182,59 @@
   font-size: 14px;
 }
 /*end my-skills widget*/
+
+/*start latest-activities widget*/
+.latest-activities {
+  background-color: white;
+  border-radius: var(--widget-radius);
+  padding: 20px;
+  grid-column: 2 / -1;
+}
+@media (max-width: 768px) {
+  .latest-activities {
+    grid-column: 1 / 2;
+  }
+}
+.latest-activities > p.c-grey {
+  margin: 10px 0 20px;
+  font-size: 15px;
+}
+.latest-activities .activity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@media (max-width: 768px) {
+  .latest-activities .activity {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+}
+.latest-activities .activity:not(:first-child) {
+  padding-top: 20px;
+}
+.latest-activities .activity:not(:last-child) {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+.latest-activities img {
+  width: 65px;
+  border-radius: 50%;
+}
+.latest-activities .info {
+  flex-grow: 1;
+}
+.latest-activities .info p:first-child,
+.latest-activities .time p:first-child {
+  margin-bottom: 5px;
+}
+.latest-activities .time {
+  text-align: right;
+}
+@media (max-width: 768px) {
+  .latest-activities .time {
+    text-align: center;
+  }
+}
+/*end latest-activities widget*/
