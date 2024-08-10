@@ -200,3 +200,63 @@
   padding: 10px;
 }
 /*end social-info widget*/
+
+/*start widgets-control widget*/
+.widgets-control {
+  background-color: white;
+  border-radius: var(--widget-radius);
+  padding: 20px;
+}
+.widgets-control p.c-grey {
+  margin: 10px 0 15px;
+  font-size: 15px;
+}
+.widgets-control ul {
+  display: grid;
+  gap: 15px;
+  font-size: 18px;
+  margin-left: 8px;
+}
+.widgets-control input {
+  appearance: none;
+}
+.widgets-control label {
+  position: relative;
+  cursor: pointer;
+  margin-left: 25px;
+}
+.widgets-control label::before,
+.widgets-control label::after {
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.widgets-control label::before {
+  content: "";
+  transform: translateY(-50%);
+  border: 2px solid var(--grey-color);
+  transition-duration: 0.3s;
+}
+.widgets-control label:hover::before {
+  border-color: var(--blue-alt-color);
+}
+.widgets-control label::after {
+  font-family: FontAwesome;
+  content: "\f00c";
+  transform: translateY(-50%) scale(0) rotate(360deg);
+  background-color: var(--blue-color);
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition-duration: 0.3s;
+}
+.widgets-control input:checked + label::after {
+  transform: translateY(-50%) scale(1);
+}
+/*end widgets-control widget*/

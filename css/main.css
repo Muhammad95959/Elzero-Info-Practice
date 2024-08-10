@@ -137,8 +137,7 @@ h1::after {
 
 /*start sidebar*/
 .sidebar {
-  width: 230px;
-  min-width: 180px;
+  min-width: 230px;
   min-height: 100vh;
   box-shadow: 0 0 10px #ddd;
   padding: 20px;
@@ -978,14 +977,18 @@ header img {
   margin-top: 20px;
   border: 1px solid #eee;
   border-collapse: collapse;
+  font-size: 15px;
 }
 .projects-table th,
 .projects-table td {
-  padding: 20px;
+  padding: 15px;
   border: 1px solid #eee;
 }
 .projects-table th {
   background-color: #eee;
+}
+.projects-table tr:hover {
+  background-color: #faf7f7;
 }
 .projects-table img {
   border-radius: 50%;
