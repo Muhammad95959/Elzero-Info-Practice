@@ -49,7 +49,7 @@
 /*start grid settings*/
 .profile {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 20px;
 }
@@ -83,10 +83,10 @@
     flex-direction: column;
     gap: 50px;
   }
-.profile-info > div:first-child {
-  border: none;
-  justify-content: center;
-}
+  .profile-info > div:first-child {
+    border: none;
+    justify-content: center;
+  }
 }
 .profile-info h3 {
   margin-bottom: -5px;
@@ -142,8 +142,43 @@
   row-gap: 8px;
 }
 @media (max-width: 768px) {
-.profile-info .info {
-  text-align: center;
-}
+  .profile-info .info {
+    text-align: center;
+  }
 }
 /*end profile-info widget*/
+
+/*start my-skills widget*/
+.my-skills {
+  background-color: white;
+  border-radius: var(--widget-radius);
+  padding: 20px;
+}
+.my-skills p.c-grey {
+  margin: 10px 0 30px;
+  font-size: 15px;
+}
+.my-skills .content > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.my-skills .content > div:not(:first-child) {
+  padding-top: 10px;
+}
+.my-skills .content > div:not(:last-child) {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+@media (max-width: 768px) {
+  .my-skills .content > div {
+    justify-content: center;
+  }
+}
+.my-skills .content p {
+  background-color: #eee;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+/*end my-skills widget*/
