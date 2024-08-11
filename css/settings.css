@@ -49,7 +49,7 @@
   width: fit-content;
   padding: 4px 10px;
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 15px;
   transition: background-color 0.3s;
 }
 .btn:focus {
@@ -166,9 +166,6 @@
 .security-info > div p.c-grey {
   font-size: 13px;
   margin-top: 7px;
-}
-.security-info a {
-  font-size: 15px;
 }
 .security-info > div:first-of-type a {
   color: white;
