@@ -1,0 +1,94 @@
+/*start global rules*/
+:root {
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+  --grey-color: #888;
+  --widget-radius: 10px;
+}
+/*end global rules*/
+
+/*start grid settings*/
+.courses {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  .courses {
+    grid-template-columns: minmax(200px, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+}
+/*end grid settings*/
+
+.box {
+  background-color: white;
+  border-radius: var(--widget-radius);
+  position: relative;
+}
+.box img.abs {
+  position: absolute;
+  width: 65px;
+  border-radius: 50%;
+  border: 2px solid white;
+  left: 20px;
+  top: 20px;
+}
+.box .image {
+  background-size: cover;
+  text-align: center;
+}
+.box .image img {
+  width: 100%;
+  border-radius: var(--widget-radius) var(--widget-radius) 0 0;
+}
+.box .content {
+  padding: 20px;
+}
+.box h3 {
+  font-size: 16px;
+}
+.box .content > p.c-grey {
+  font-size: 14px;
+  margin: 15px 0 20px;
+  line-height: 1.6;
+  position: relative;
+}
+.box .content > p.c-grey::before {
+  content: "";
+  width: calc(100% + 40px);
+  height: 1px;
+  background-color: #ddd;
+  bottom: -33px;
+  transform: translateY(-50%);
+  left: -20px;
+  position: absolute;
+}
+.box .content > p.bg-blue {
+  width: fit-content;
+  padding: 0 8px;
+  border-radius: 6px;
+  font-size: 13px;
+  color: white;
+  margin: auto;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.box div.c-grey {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.box div.c-grey i {
+  margin-right: 3px;
+}
