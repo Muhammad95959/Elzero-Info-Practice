@@ -1,0 +1,110 @@
+/*start global rules*/
+:root {
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+  --grey-color: #888;
+  --widget-radius: 10px;
+}
+/*end global rules*/
+
+.plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  .plans {
+    grid-template-columns: minmax(200px, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+}
+.box {
+  background-color: white;
+  padding: 20px;
+}
+.box .head {
+  color: white;
+  padding: 15px;
+  border: 3px solid white;
+  outline: 3px solid;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.box .head.bg-green {
+ outline-color: var(--green-color);
+}
+.box .head.bg-blue {
+ outline-color: var(--blue-color);
+}
+.box .head.bg-orange {
+ outline-color: var(--orange-color);
+}
+.box .head .type {
+  font-size: 30px;
+  letter-spacing: -2px;
+}
+.box .head .price {
+  font-size: 40px;
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+.box .head .price::before {
+  content: "$";
+  font-size: 24px;
+  position: absolute;
+  top: 0;
+  left: -20px;
+}
+.box .services > div {
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+.box .services > div p {
+  font-size: 15px;
+}
+.box .services .available p:before {
+  font-family: FontAwesome;
+  content: "\f00c";
+  margin-right: 10px;
+  color: var(--green-color);
+  font-size: 18px;
+}
+.box .services .not-available p:before {
+  font-family: FontAwesome;
+  content: "\f00d";
+  margin-right: 10px;
+  color: var(--red-color);
+  font-size: 18px;
+}
+.box .services > div i {
+  font-size: 9px;
+  color: white;
+  background-color: var(--grey-color);
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.box > a {
+  display: block;
+  width: fit-content;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-top: 15px;
+}
+.box > p.c-grey {
+  margin-top: 15px;
+  text-align: center;
+}
