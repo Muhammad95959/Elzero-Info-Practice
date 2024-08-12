@@ -12,6 +12,7 @@
 
 /*start grid settings*/
 .projects {
+  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   gap: 20px;
@@ -19,6 +20,7 @@
 }
 @media (max-width: 768px) {
   .projects {
+    -ms-grid-columns: minmax(200px, 1fr);
     grid-template-columns: minmax(200px, 1fr);
     gap: 10px;
     padding: 10px;
@@ -43,12 +45,16 @@
   font-size: 15px;
 }
 .box .team {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 40px 0 20px;
 }
 @media (max-width: 768px) {
   .box .team {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 .box .team a:hover {
@@ -63,8 +69,12 @@
   margin-right: -15px;
 }
 .box .skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: right;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
   gap: 5px;
   padding: 15px 0;
   border-top: 1px solid #eee;
@@ -72,8 +82,13 @@
 }
 @media (max-width: 768px) {
   .box .skills {
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 15px;
   }
 }
@@ -84,14 +99,23 @@
   padding: 3px 8px;
 }
 .box .progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 15px;
 }
 @media (max-width: 768px) {
   .box .progress {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 15px;
   }
 }
